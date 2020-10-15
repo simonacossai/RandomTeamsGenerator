@@ -19,6 +19,7 @@ let teams= document.querySelector("select");
         row.appendChild(divs[i]);
     }
     teams.value=""
+    names.value=""
 }
 
 
@@ -27,9 +28,21 @@ const takeRandomPerson=()=>{
     let teamDivs = document.querySelectorAll(".col");
     let randomIndex = Math.floor(Math.random() * arrayOfPerson.length);
     let randomItem = arrayOfPerson.splice(randomIndex, 1)[0];
+    console.log(randomItem)
     availableDiv.innerHTML=arrayOfPerson;
-
     let randomDiv = Math.floor(Math.random() * teamDivs.length);
+   
     teamDivs[randomDiv].innerHTML+=randomItem+ ", ";
 }
 
+const Reset=()=>{
+    teams.value=""
+    names.value=""
+    let availableDiv = document.querySelector(".available");
+    availableDiv.innerHTML="";
+    let divs=[];
+    divs = document.querySelectorAll(".col");
+    for(let i=0; i<divs.length; i++){
+        divs[i].remove();
+    }
+}

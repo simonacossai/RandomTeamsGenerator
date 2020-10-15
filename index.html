@@ -26,7 +26,7 @@
 
     <div class="container mt-5 ">
         <div class="row">
-            <div class="col-sm-12 col-md-6">
+            <div class="col-sm-12 col-md-4 col-lg-6">
             <form class="table">
             <div class="form-group ">
               <label for="exampleFormControlSelect1">Select the number of teams</label>
@@ -40,13 +40,14 @@
               <label for="exampleFormControlTextarea1">Enter the names of the participants</label>
               <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
             </div>
-            <button type="button" class="btn btn-outline-info" onclick="printValue()">Create teams</button>
+            <button type="button" class="btn btn-outline-info" onclick="printValue()">Add names</button>
             <button type="button" class="btn btn-outline-info toggle-person" onclick="takeRandomPerson()">Create teams</button>
+            <button type="button" class="btn btn-outline-info " onclick="Reset()">Reset</button>
 
           </form>
             </div>
 
-            <div class="col-sm-12 col-md-6">
+            <div class="col-sm-12 col-md-8 col-lg-6">
                 <div class="available"></div>
             </div>
         </div>
